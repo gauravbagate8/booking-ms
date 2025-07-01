@@ -1,0 +1,104 @@
+[33mcommit f1f92ee166c44731e95df084bba1e147775fb1cd[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdev[m[33m, [m[1;31morigin/dev[m[33m, [m[1;32mbugfix/java[m[33m)[m
+Author: Server <gaurav.bagate@gmail.com>
+Date:   Mon Jun 30 20:42:59 2025 +0530
+
+    update hotel.java
+
+[33mcommit 149cad9b48206726a652baa4e99807b6543ce651[m[33m ([m[1;32mfeature/bus_module[m[33m)[m
+Author: Server <gaurav.bagate@gmail.com>
+Date:   Fri Jun 27 20:12:11 2025 +0530
+
+    changes
+
+[33mcommit cc887eb16420d94b274c744da65ccea7ae3eacb2[m
+Author: Server <gaurav.bagate@gmail.com>
+Date:   Fri Jun 27 18:52:21 2025 +0530
+
+    stym sir code add
+
+[33mcommit 51a14e6cfaf3f483f016f0f08bc0b11423e19800[m[33m ([m[1;31morigin/master[m[33m)[m
+Merge: 12b5e24 9e56ca0
+Author: gauravbagate8 <gaurav.bagate@gmail.com>
+Date:   Thu Jun 26 21:49:56 2025 +0530
+
+    Merge pull request #5 from gauravbagate8/prod
+    
+    Prod
+
+[33mcommit 9e56ca0cc5322e2300cd6311796e20b2917a1c88[m
+Merge: 760c8b2 5c4b3e9
+Author: gauravbagate8 <gaurav.bagate@gmail.com>
+Date:   Thu Jun 26 21:48:46 2025 +0530
+
+    Merge pull request #4 from gauravbagate8/stage
+    
+    Stage
+
+[33mcommit 5c4b3e99a0d76ddf6c59b997cd6f6edc8a8fa4f4[m
+Merge: 44cf8c5 efabfaa
+Author: gauravbagate8 <gaurav.bagate@gmail.com>
+Date:   Thu Jun 26 21:46:56 2025 +0530
+
+    Merge pull request #3 from gauravbagate8/dev
+    
+    sending test1 to dev
+
+[33mcommit efabfaa9ae781d34c9e049d7dd3690afbf507317[m
+Author: Server <gaurav.bagate@gmail.com>
+Date:   Thu Jun 26 21:42:16 2025 +0530
+
+    sending test1 to dev
+
+[33mcommit 12b5e24b93d53d1897adbb84938e36f9ee3c8209[m
+Merge: 760c8b2 44cf8c5
+Author: gauravbagate8 <gaurav.bagate@gmail.com>
+Date:   Thu Jun 26 21:32:32 2025 +0530
+
+    Merge pull request #2 from gauravbagate8/stage
+    
+    Stage
+
+[33mcommit 44cf8c501a6451d3d215ac2002effe9b36fa503a[m
+Merge: 760c8b2 d1f909c
+Author: gauravbagate8 <gaurav.bagate@gmail.com>
+Date:   Thu Jun 26 21:31:29 2025 +0530
+
+    Merge pull request #1 from gauravbagate8/dev
+    
+    adding a text code file
+
+[33mcommit d1f909cce7c88721b915a8550651dcf87029f39a[m
+Author: Server <gaurav.bagate@gmail.com>
+Date:   Thu Jun 26 21:26:31 2025 +0530
+
+    adding a text code file
+
+[33mcommit 760c8b264af9a2bd92f25071cad74301e07f107d[m[33m ([m[1;31morigin/prod[m[33m, [m[1;32mprod[m[33m, [m[1;32mmaster[m[33m)[m
+Author: Server <gaurav.bagate@gmail.com>
+Date:   Thu Jun 26 20:27:59 2025 +0530
+
+    te
+
+[33mcommit 50b3642dcb5fcab1ab30e89691d42f95b0a97b22[m
+Author: gauravbagate8 <gaurav.bagate@gmail.com>
+Date:   Wed Jun 25 20:30:43 2025 +0530
+
+    Rename gauravtesting to gittolocal
+
+[33mcommit ce0c208086f8034a4e02a952153924daeafe1788[m
+Author: Server <gaurav.bagate@gmail.com>
+Date:   Wed Jun 25 20:28:00 2025 +0530
+
+    local to git check
+
+[33mcommit 17d0791abf2e6b9097dbc521ac518f8f09eb74d9[m
+Author: gauravbagate8 <gaurav.bagate@gmail.com>
+Date:   Wed Jun 25 20:26:28 2025 +0530
+
+    Create gauravtesting
+
+[33mcommit 99d760c5e434c090f7bb67a10ab484fb4fa6225f[m
+Author: Server <gaurav.bagate@gmail.com>
+Date:   Wed Jun 25 20:18:45 2025 +0530
+
+    codeupdate
