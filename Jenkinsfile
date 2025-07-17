@@ -1,13 +1,13 @@
 pipeline {
 
-	agent any
+	agent {label 'Jenkins-slave1-TEAM-A'}
 
     options {
         buildDiscarder(logRotator(numToKeepStr: '3', artifactNumToKeepStr: '3'))
     }
 
     tools {
-        maven 'maven_3.9.4'
+        maven 'maven_3.9.10'
     }
 
     stages {
