@@ -1,4 +1,4 @@
-FROM tomcat:9.0.52-jdk17-openjdk-slim
+FROM tomcat:9.0.52-jre11-openjdk-slim
 
 # Install Java 17
 RUN apt-get update && \
@@ -13,7 +13,7 @@ RUN update-alternatives --set java /usr/lib/jvm/java-17-openjdk-amd64/bin/java &
 RUN rm -rf /usr/local/tomcat/webapps/*
 
 # Copy the War file into the Tomcat webapps directory
-COPY target/booking-ms.war /usr/local/tomcat/webapps/ROOT.war
+COPY target/booking-ms.jar /usr/local/tomcat/webapps
 
 # Expose port 8080
 EXPOSE 8080
