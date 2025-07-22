@@ -1,4 +1,4 @@
-FROM tomcat:9.0.52-jdk17-openjdk-slim
+FROM tomcat:9.0.85-jdk17-temurin
 
 # Install Java 17
 RUN apt-get update && \
