@@ -66,12 +66,12 @@ pipeline {
         stage('Docker Image Push to Amazon ECR') {
             steps {
                 script {
-                    withDockerRegistry([credentialsId: 'ecr:ap-south-1:ecr-credentials', url: "https://533267238276.dkr.ecr.ap-south-1.amazonaws.com"]) {
+                    withDockerRegistry([credentialsId: 'ecr:ap-south-1:ecr-credentials', url: "https://034362045798.dkr.ecr.ap-south-1.amazonaws.com"]) {
                         sh """
                             echo "List the docker images present in local"
                             docker images
                             echo "Tagging the Docker Image: In Progress"
-                            docker tag gauravbagate8/booking-ms:latest 533267238276.dkr.ecr.ap-south-1.amazonaws.com/booking-ms:latest
+                            docker tag gauravbagate8/booking-ms:latest 034362045798.dkr.ecr.ap-south-1.amazonaws.com/booking-ms:latest
                             echo "Tagging the Docker Image: Completed"
                             echo "Push Docker Image to ECR: In Progress"
                             docker push 533267238276.dkr.ecr.ap-south-1.amazonaws.com/booking-ms:latest
