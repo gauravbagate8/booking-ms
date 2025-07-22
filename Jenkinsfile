@@ -74,7 +74,7 @@ pipeline {
                             docker tag gauravbagate8/booking-ms:latest 034362045798.dkr.ecr.ap-south-1.amazonaws.com/booking-ms:latest
                             echo "Tagging the Docker Image: Completed"
                             echo "Push Docker Image to ECR: In Progress"
-                            docker push 533267238276.dkr.ecr.ap-south-1.amazonaws.com/booking-ms:latest
+                            docker push 034362045798.dkr.ecr.ap-south-1.amazonaws.com/booking-ms:latest
                             echo "Push Docker Image to ECR: Completed"
                         """
                     }
