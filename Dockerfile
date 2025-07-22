@@ -1,4 +1,16 @@
-FROM tomcat:9.0.52-jre11-openjdk-slim
+FROM openjdk:17-jdk-slim
+
+# Create app directory
+WORKDIR /app
+
+# Copy JAR file
+COPY ./target/booking-ms*.jar app.jar
+
+# Expose port (optional, for info)
+EXPOSE 8080
+
+# Run Spring Boot app
+ENTRYPOINT ["java", "-jar", "app.jar"]
 
 # Install Java 17
 RUN apt-get update && \
@@ -14,9 +26,6 @@ RUN rm -rf /usr/local/tomcat/webapps/*
 
 # Copy the War file into the Tomcat webapps directory
 COPY ./target/booking-ms.jar /usr/local/tomcat/webapps
-
-# Expose port 8080
-EXPOSE 8080
 
 # Set the user
 USER booking-ms
