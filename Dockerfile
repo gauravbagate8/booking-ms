@@ -13,7 +13,7 @@ RUN update-alternatives --set java /usr/lib/jvm/java-17-openjdk-amd64/bin/java &
 RUN rm -rf /usr/local/tomcat/webapps/*
 
 # Copy the War file into the Tomcat webapps directory
-COPY target/booking-ms.jar /usr/local/tomcat/webapps
+COPY ./target/booking-ms.jar /usr/local/tomcat/webapps
 
 # Expose port 8080
 EXPOSE 8080
