@@ -29,6 +29,7 @@ pipeline {
             steps {
                   echo 'Creating JAR Artifact'
                         sh 'mvn clean package -DskipTests'
+                        sh 'mv target/booking-ms-*.jar target/booking-ms.jar'
                         echo 'Artifact Creation Completed'
             }
         }
@@ -36,7 +37,6 @@ pipeline {
             steps {
                 echo "Starting Building Docker Image"
                 sh "docker build -t gauravbagate8/booking-ms ."
-                sh "docker build -t booking-ms ."
                 echo 'Docker Image Build Completed'
             }
         }
@@ -47,7 +47,7 @@ pipeline {
                 echo 'Docker Image Scanning Started'
             }
         }
-        stage(' Docker push to Docker Hub') {
+        stage('Docker push to Docker Hub') {
            steps {
               script {
                  withCredentials([string(credentialsId: 'dockerhubCred', variable: 'dockerhubCred')]){
