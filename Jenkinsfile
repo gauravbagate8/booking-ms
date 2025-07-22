@@ -54,11 +54,11 @@ pipeline {
 
         stage('Docker push to Docker Hub') {
             steps {
-                  withCredentials([string(credentialsId: 'dockerhubCred', variable: 'DOCKER_TOKEN')]) {
-                            sh 'echo "$DOCKER_TOKEN" | docker login -u gauravbagate8 --password-stdin docker.io'
-                            echo "Push Docker Image to DockerHub : In Progress"
-                            sh 'docker push gauravbagate8/booking-ms:latest'
-                            echo "Push Docker Image to DockerHub : Completed"
+                  withCredentials([string(credentialsId: 'dockerhubCred', variable: 'dockerhubCred')]){
+                                   sh 'docker login docker.io -u gauravbagate8 -p ${dockerhubCred}'
+                                   echo "Push Docker Image to DockerHub : In Progress"
+                                   sh 'docker push gauravbagate8/booking-ms:latest'
+                                   echo "Push Docker Image to DockerHub : In Progress"
                 }
             }
         }
