@@ -27,9 +27,9 @@ pipeline {
         }
         stage('Code Package') {
             steps {
-                echo 'Creating WAR Artifact'
-                sh 'mvn clean package'
-                echo 'Artifact Creation Completed'
+                  echo 'Creating JAR Artifact'
+                        sh 'mvn clean package -DskipTests'
+                        echo 'Artifact Creation Completed'
             }
         }
         stage('Building & Tag Docker Image') {
