@@ -88,7 +88,7 @@ pipeline {
                     withCredentials([usernamePassword(credentialsId: 'nexuscred', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
                         sh 'docker login http://13.235.254.242:8085/repository/booking-ms/ -u admin -p ${PASSWORD}'
                         echo "Push Docker Image to Nexus : In Progress"
-                        sh 'docker tag booking-ms 13.235.254.242:8085/booking-ms:latest'
+                        sh 'docker tag gauravbagate8/booking-ms 13.235.254.242:8085/booking-ms:latest'
                         sh 'docker push 13.235.254.242:8085/booking-ms'
                         echo "Push Docker Image to Nexus : Completed"
                     }
