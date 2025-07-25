@@ -27,6 +27,21 @@ pipeline {
             }
         }
 
+        stage('Sonarqube') {
+            environment {
+                scannerHome = tool 'qube'
+            }
+            steps {
+                withSonarQubeEnv('sonar-server') {
+                    sh "${scannerHome}/bin/sonar-scanner"
+                    sh 'mvn sonar:sonar'
+                }
+                timeout(time: 10, unit: 'MINUTES') {
+                    waitForQualityGate abortPipeline: true
+                }
+            }
+        }
+
         stage('Code Package') {
             steps {
                 echo 'Creating JAR Artifact'
@@ -51,20 +66,5 @@ pipeline {
                 echo 'Docker Image Scanning Completed'
             }
         }
-
-        stage('Upload the docker Image to Nexus') {
-            steps {
-                script {
-                    withCredentials([usernamePassword(credentialsId: 'nexuscred', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
-                        sh 'docker login http://13.235.254.242:8085/repository/booking-ms/ -u admin -p ${PASSWORD}'
-                        echo "Push Docker Image to Nexus : In Progress"
-                        sh 'docker tag gauravbagate8/booking-ms 13.235.254.242:8085/booking-ms:latest'
-                        sh 'docker push 13.235.254.242:8085/booking-ms'
-                        echo "Push Docker Image to Nexus : Completed"
-                    }
-                }
-            }
-        }
-
     }
 }
